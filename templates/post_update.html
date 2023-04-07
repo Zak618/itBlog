@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Изменение
+{% endblock %}
+
+{% block body %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1>Изменить статью</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" value="{{ article.title }}" placeholder="Введите название статьи"><br>
+        <textarea name="intro" id="intro" class="form-control" placeholder="Введите анонс">{{ article.intro }}</textarea><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Введите основной текст">{{ article.text }}</textarea><br>
+        <input type="submit" class="btn btn-success" value="Изменить">
+    </form>
+    </div>
+{% endblock %}
